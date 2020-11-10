@@ -5,21 +5,26 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Minesweeper</title>
     <link rel="stylesheet" href="styles.css">
-    <link href="https://fonts.googleapis.com/css2?family=Exo:wght@700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Exo:wght@700&family=Press+Start+2P&display=swap" rel="stylesheet">
 </head>
 <body>
-    <h1>Minesweeper</h1>
+    <h1 class="title">Minesweeper</h1>
 
     <div class="subHeading">
-        <h3>Hit 'enter' to begin</h3>
+        <h3 class="difficultyHeading">Select difficulty</h3>
+        <button class="difBtn easyBtn">Easy</button>
+        <button class="difBtn medBtn">Medium</button>
+        <button class="difBtn hardBtn">Hard</button>
     </div>
 
-
-    <div class="board not-visible"></div>
-    <div class="gameStats not-visible">
-        <p class="bombsRemaining"></p>
+    <div class="gameArea not-visible">
+        <div id="board" class="board"></div>
+        <div class="gameStats">
+            <p class="bombsRemaining"></p>
+            <p class="warning not-visible">Hang on, recheck your flags</p>
+            <button onClick="window.location.reload();">Restart</button>
+        </div>
     </div>
-   
 
     <div class="gameMessage"></div>
 
